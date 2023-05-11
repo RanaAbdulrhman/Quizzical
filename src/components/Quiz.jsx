@@ -56,7 +56,7 @@ export default function Question({questionIndex , question, MoveToNextQuestion, 
       transition={{ ease: "easeOut"}}
       initial={{ opacity: 0, x:-100 }}
       animate={{ opacity: 1, x:0}}
-      className="content flex flex-col w-10/12 xl:w-5/12 lg:w-7/12 sm:w-10/12 h-screen items-center justify-center px-4"
+      className="content flex flex-col w-10/12 xl:w-5/12 lg:w-7/12 sm:w-10/12 h-full items-center justify-center px-4"
       >
         <div className= "p-5 mb-4 font-semibold text-gray-800 text-center rounded-full bg-lightPurpely aspect-square flex items-end justify-center">
           <span className='text-5xl'>{score}</span> / {quizSettings.amount}
@@ -87,8 +87,8 @@ export default function Question({questionIndex , question, MoveToNextQuestion, 
           }
         </div>
         <div className='flex gap-3 mt-5'>
-          <div className='text-white rounded-full text-2xl border-2 w-fit px-3'>Category: {getCategoryFromNumber(quizSettings.category)}</div>
-          <div className='text-white rounded-full text-2xl border-2 w-fit px-3'>Difficulty: {quizSettings.difficulty}</div>
+          <div className='text-white rounded-full lg:text-2xl text-xl border-2 w-fit px-3'>Category: {getCategoryFromNumber(quizSettings.category)}</div>
+          <div className='text-white rounded-full lg:text-2xl text-xl border-2 w-fit px-3'>Difficulty: {quizSettings.difficulty}</div>
         </div>
       </motion.div>
   )
