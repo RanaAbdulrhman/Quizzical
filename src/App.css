@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
+.background-texture{
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+body *{
+  font-family: 'Darker Grotesque', sans-serif;
+}
+.background-texture:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+.background-pink:after {
+  background-color: #c981a4;
+  opacity: 0.3;
+}
+.background-purple:after{
+  opacity: 0.7;
+  background-color: #4D5B9E;
+}
+.content {
+  position: relative;
+  z-index: 100;
+}
+
+.error-message {
+  text-align: center;
+  color: rgb(158, 0, 0);
+  font-style: italic;
+  background-color: white;
+}
